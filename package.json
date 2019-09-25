@@ -1,0 +1,34 @@
+{
+  "name": "mediasoup-demo-server",
+  "version": "3.0.0",
+  "private": true,
+  "description": "mediasoup demo server",
+  "author": "Iñaki Baz Castillo <ibc@aliax.net>",
+  "license": "All Rights Reserved",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.js server.js lib connect.js",
+    "start": "DEBUG=${DEBUG:='*mediasoup* *DEBUG* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node server.js",
+    "connect": "node connect.js"
+  },
+  "dependencies": {
+    "@sitespeed.io/throttle": "^0.5.1",
+    "awaitqueue": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "colors": "^1.3.3",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "mediasoup": "github:versatica/mediasoup#v3",
+    "mediasoup-client": "^3.2.2",
+    "pidusage": "^2.0.17",
+    "protoo-server": "^4.0.3",
+    "sctp": "^0.0.18",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "^1.2.1"
+  }
+}
